@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Objectives</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>So here's the deal</h1>
+  <p>We gotta build us a server</p>
+  <p>Right now it's gonna handle a simple website</p>
+  <p>But later maybe these skills will help train ML models. We shall see.</p>
+
+  <form action="/sendEmail" method="get">
+      <input name="senderEmail" type="text" placeholder="Your email"></input>
+      <br/>
+      <input name="senderPassword" type="text" placeholder="Your password"></input>
+      <br/>
+      <input name="receiverEmail" type="text" placeholder="Their email"></input>
+      <br/>
+      <textarea name="emailBody" type="text" rows="7" cols="25">
+      </textarea>
+      <br/>
+      <input type="submit" value="Submit Email"/>
+  </form>
+</div>
+</body>
+
+</html>

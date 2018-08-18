@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index.js'); // A Router for index module
-var usersRouter = require('./routes/users.js'); // A Router for users module
+var indexRouter = require('./routes/index.js'); // Express (Router) for index module
+var sendEmailRouter = require('./routes/sendEmail.js'); // Express (Router) for sendEmail module
 
 // Get express object
 var app = express();
@@ -20,8 +20,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public/html'))); // Use public for static serving
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/index', indexRouter);
+app.use('/sendEmail', sendEmailRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
